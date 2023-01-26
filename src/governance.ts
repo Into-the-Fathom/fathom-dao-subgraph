@@ -1,8 +1,7 @@
 import { BigInt } from "@graphprotocol/graph-ts";
 import { ProposalCreated, VoteCast, VoteCastWithParams } from "../generated/Governor/Governor"
 import { Proposal, GovernanceStat } from "../generated/schema";
-import { Constants } from "./utils/constants"
-
+import { addresses } from "../config/addresses"
 
 enum VoteType {
     Against,
@@ -12,9 +11,9 @@ enum VoteType {
 
 export function proposalCreatedHandler(event: ProposalCreated): void {
     // load ProtocolStat (create if first stake event)
-    let governanceStat = GovernanceStat.load(Constants.GOVERNANCE)
+    let governanceStat = GovernanceStat.load(addresses.Governor)
     if (governanceStat == null) {
-        governanceStat = new GovernanceStat(Constants.GOVERNANCE)
+        governanceStat = new GovernanceStat(addresses.Governor)
         governanceStat.totalProposalsCount = BigInt.fromString('0') 
     }
     // increment Total Proposals Count

@@ -7,8 +7,8 @@ dataSources:
     network: mainnet
     source:
       abi: Governor
-      address: '0x786be460ad0b14Dc16D93f3065428f6b8fC0b00b'
-      startBlock: 42201579 
+      address: '{{Governor}}'
+      startBlock: {{blockNumber}} 
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -32,8 +32,8 @@ dataSources:
     network: mainnet
     source:
       abi: StakingPackage
-      address: '0xEe948cf2DFf205f50F48BD7CC9B80aFE6303688A'
-      startBlock: 42201579 
+      address: '{{Staking}}'
+      startBlock: {{blockNumber}} 
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6

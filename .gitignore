@@ -1,0 +1,9 @@
+*.DS_Store
+
+build
+generated
+node_modules
+config/addresses.ts
+config/generatedAddresses.json
+subgraph.yaml
+

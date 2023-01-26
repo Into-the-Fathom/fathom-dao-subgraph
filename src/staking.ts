@@ -3,13 +3,14 @@ import { Staked, Unstaked, StakingPackage, Pending, StreamCreated, PartialUnstak
 import { StakedEvent, UnstakedEvent, Staker,ProtocolStat, LockPosition, Stream} from "../generated/schema";
 import { ERC20 } from "../generated/StakingPackage/ERC20"
 import { Constants } from "./utils/constants"
+import { addresses } from "../config/addresses"
 
 
 export function stakeHandler(event: Staked): void {
     // load ProtocolStat (create if first stake event)
-    let protocolStats = ProtocolStat.load(Constants.STAKING_CONTRACT)
+    let protocolStats = ProtocolStat.load(addresses.Staking)
     if (protocolStats == null) {
-        protocolStats = new ProtocolStat(Constants.STAKING_CONTRACT)
+        protocolStats = new ProtocolStat(addresses.Staking)
         protocolStats.totalStakeFTHM = BigInt.fromString('0')  
         protocolStats.totalVotes = BigInt.fromString('0') 
         protocolStats.totalUnstakeEvents = BigInt.fromString('0')
@@ -58,8 +59,8 @@ export function stakeHandler(event: Staked): void {
     staker.lockPositionIds = lockPositionIds
 
     // define contracts
-    let stakingPackage = StakingPackage.bind(Address.fromString(Constants.STAKING_CONTRACT))
-    let vfthmToken = ERC20.bind(Address.fromString(Constants.VFTHM))
+    let stakingPackage = StakingPackage.bind(Address.fromString(addresses.Staking))
+    let vfthmToken = ERC20.bind(Address.fromString(addresses.VFTHM))
 
     // add amount to user's total staked
     staker.totalStaked = staker.totalStaked.plus(event.params.amount)
@@ -86,8 +87,8 @@ export function stakeHandler(event: Staked): void {
 
 export function unstakeHandler(event: Unstaked): void {
     // define contracts
-    let stakingPackage = StakingPackage.bind(Address.fromString(Constants.STAKING_CONTRACT))
-    let vfthmToken = ERC20.bind(Address.fromString(Constants.VFTHM))
+    let stakingPackage = StakingPackage.bind(Address.fromString(addresses.Staking))
+    let vfthmToken = ERC20.bind(Address.fromString(addresses.VFTHM))
 
     // update staker data
     let staker = Staker.load(event.params.account.toHexString())
@@ -104,7 +105,7 @@ export function unstakeHandler(event: Unstaked): void {
     }
 
     // update protocol stats
-    let protocolStats = ProtocolStat.load(Constants.STAKING_CONTRACT)
+    let protocolStats = ProtocolStat.load(addresses.Staking)
     if (protocolStats != null) {
         // subtract amount from overall total staked
         protocolStats.totalStakeFTHM = protocolStats.totalStakeFTHM.minus(event.params.amount);
@@ -143,8 +144,8 @@ export function withdrawHandler(event: Released): void {
 
 export function partialUnstakeHandler(event: PartialUnstaked): void {
     // define contracts
-    let stakingPackage = StakingPackage.bind(Address.fromString(Constants.STAKING_CONTRACT))
-    let vfthmToken = ERC20.bind(Address.fromString(Constants.VFTHM))
+    let stakingPackage = StakingPackage.bind(Address.fromString(addresses.Staking))
+    let vfthmToken = ERC20.bind(Address.fromString(addresses.VFTHM))
 
     // update staker data
     let staker = Staker.load(event.params.account.toHexString())
@@ -162,7 +163,7 @@ export function partialUnstakeHandler(event: PartialUnstaked): void {
     }
 
     // update protocol stats
-    let protocolStats = ProtocolStat.load(Constants.STAKING_CONTRACT)
+    let protocolStats = ProtocolStat.load(addresses.Staking)
     if (protocolStats != null) {
         // subtract amount from overall total staked
         protocolStats.totalStakeFTHM = protocolStats.totalStakeFTHM.minus(event.params.amount);
@@ -197,7 +198,7 @@ export function pendingHandler(event: Pending): void {
 
 export function streamCreatedHandler(event: StreamCreated): void {
     let stream  = new Stream(event.params.streamId.toHexString())
-    let stakingPackage = StakingPackage.bind(Address.fromString(Constants.STAKING_CONTRACT))
+    let stakingPackage = StakingPackage.bind(Address.fromString(addresses.Staking))
     log.info('stream id {}',[event.params.streamId.toString()])
     let schedule = stakingPackage.getStreamSchedule(event.params.streamId)
     let streamData = stakingPackage.getStream(event.params.streamId)
@@ -284,7 +285,7 @@ function getOneDayReward(streamId: BigInt, now: BigInt):BigInt{
 
 function getAPR(streamId: BigInt, now: BigInt): BigInt{
     const oneDayReward = getOneDayReward(streamId,now)
-    let stakingPackage = StakingPackage.bind(Address.fromString(Constants.STAKING_CONTRACT))
+    let stakingPackage = StakingPackage.bind(Address.fromString(addresses.Staking))
     const totalStakedValue = stakingPackage.totalAmountOfStakedToken()
     const oneYearValue = BigInt.fromString('365')
     const HundredPercent = BigInt.fromString('100')
