@@ -2,7 +2,7 @@ import { Address, BigInt, Bytes, log} from "@graphprotocol/graph-ts";
 import { Staked, Unstaked, StakingPackage, Pending, StreamCreated, PartialUnstaked, Released } from "../generated/StakingPackage/StakingPackage"
 import { StakedEvent, UnstakedEvent, Staker,ProtocolStat, LockPosition, Stream} from "../generated/schema";
 import { ERC20 } from "../generated/StakingPackage/ERC20"
-import { Constants } from "./utils/constants"
+import { Constants } from "./utils/Constants"
 import { addresses } from "../config/addresses"
 
 
