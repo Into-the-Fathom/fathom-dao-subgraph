@@ -2,11 +2,11 @@
     "51": {
         "dev":{
             "addresses": {
-                "Governor": "0x10471Df2E5E438f4Bf717aE40ee50b4795C086d6",
-                "Staking": "0x9cc9Bb3E1361964742c379D7051d2cAc5b5Dd251",
-                "VFTHM":"0x1c46F4599F38B0E8aCD62199BBA559bb89304CD0"
+                "Governor": "0x2aD8FbeE4AaaB3d43Ed233426C919379CB9b324B",
+                "Staking": "0xAAe8f0e2882665C94d96309ED85BC7622E99940a",
+                "VFTHM":"0x43e4D5f4F2b35E7e3B33279E4374EcEece86033c"
             },
-            "blockNumber":"47778400"
+            "blockNumber":"47900000"
         },
         "demo":{
             "addresses": {
