@@ -10,11 +10,11 @@
         },
         "demo":{
             "addresses": {
-                "Governor": "0x7831461f3B86f411B1Fa62e00B19DB5a6f1eBF72",
-                "Staking": "0x258F6E05E60B8AB4d9dB6Aad04F0DA50373ec3A3",
-                "VFTHM":"0xdC8d18d1B7D08Dcc0431511422b3d20589a8151f"
+                "Governor": "0x089272Bb6949B658A2C194b36a2Edc1A8F76942e",
+                "Staking": "0xd682B81421652424751212603Cc659A80BBC5A5E",
+                "VFTHM":"0x75A95747416cC060C678a580E0a33e4a39AaAE83"
             },
-            "blockNumber":"45292056"
+            "blockNumber":"47998000"
         },
         "network":"apothem"
     }
