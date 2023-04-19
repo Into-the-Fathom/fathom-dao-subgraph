@@ -11,6 +11,10 @@
     "remove:dev": "graph remove --node http://159.223.112.169:8020/ dao-subgraph",
     "deploy:dev": "graph deploy --node http://159.223.112.169:8020/ --ipfs http://159.223.112.169:5001 dao-subgraph",
 
+    "create:demo": "graph create --node http://167.71.216.61:8020/ dao-subgraph",
+    "remove:demo": "graph remove --node http://167.71.216.61:8020/ dao-subgraph",
+    "deploy:demo": "graph deploy --node http://167.71.216.61:8020/ --ipfs http://167.71.216.61:5001 dao-subgraph",
+
     "create:local": "graph create --node http://localhost:8020/ dao-subgraph subgraph.yaml",
     "remove:local": "graph remove --node http://localhost:8020/ dao-subgraph subgraph.yaml",
     "deploy:local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 --version-label v0.0.1 dao-subgraph subgraph.yaml",
