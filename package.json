@@ -15,6 +15,10 @@
     "remove:demo": "graph remove --node http://167.71.216.61:8020/ dao-subgraph",
     "deploy:demo": "graph deploy --node http://167.71.216.61:8020/ --ipfs http://167.71.216.61:5001 dao-subgraph",
 
+    "create:qa": "graph create --node http://170.64.181.220:8020/ dao-subgraph",
+    "remove:qa": "graph remove --node http://170.64.181.220:8020/ dao-subgraph",
+    "deploy:qa": "graph deploy --node http://170.64.181.220:8020/ --ipfs http://170.64.181.220:5001 dao-subgraph",
+
     "create:local": "graph create --node http://localhost:8020/ dao-subgraph subgraph.yaml",
     "remove:local": "graph remove --node http://localhost:8020/ dao-subgraph subgraph.yaml",
     "deploy:local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 --version-label v0.0.1 dao-subgraph subgraph.yaml",
@@ -23,7 +27,10 @@
     "prep:apothem:dev": "yarn clean && yarn prep:addresses:apothem:dev && mustache ./config/generatedAddresses.json subgraph.template.yaml > subgraph.yaml && graph codegen && graph build",
 
     "prep:addresses:apothem:demo": "ts-node config/apothemAddressScript.ts demo && mustache ./config/generatedAddresses.json ./config/addresses.template.ts > ./config/addresses.ts",
-    "prep:apothem:demo": "yarn clean && yarn prep:addresses:apothem:demo && mustache ./config/generatedAddresses.json subgraph.template.yaml > subgraph.yaml && graph codegen && graph build"
+    "prep:apothem:demo": "yarn clean && yarn prep:addresses:apothem:demo && mustache ./config/generatedAddresses.json subgraph.template.yaml > subgraph.yaml && graph codegen && graph build",
+
+    "prep:addresses:apothem:qa": "ts-node config/apothemAddressScript.ts qa && mustache ./config/generatedAddresses.json ./config/addresses.template.ts > ./config/addresses.ts",
+    "prep:apothem:qa": "yarn clean && yarn prep:addresses:apothem:qa && mustache ./config/generatedAddresses.json subgraph.template.yaml > subgraph.yaml && graph codegen && graph build"
 
   },
   "dependencies": {

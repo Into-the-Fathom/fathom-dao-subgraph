@@ -16,6 +16,14 @@
             },
             "blockNumber":"47998000"
         },
+        "qa":{
+            "addresses": {
+                "Governor": "0x2779f3c2515871233fdEd5BFc824dD95B955C57a",
+                "Staking": "0x7cCCEdf0aB490343Dc29009d07c4384460109911",
+                "VFTHM":"0x3aA9081D041735adcDc559b47BC5d184d8e8701D"
+            },
+            "blockNumber":"47998000"
+        },
         "network":"apothem"
     }
 }
