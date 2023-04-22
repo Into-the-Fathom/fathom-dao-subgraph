@@ -6,15 +6,15 @@ import { Addresses } from './addresses.template'
 // mustache doesn't like numbered object keys
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 let renameAddresses: any = networkAddresses
-renameAddresses['apothem'] = networkAddresses['51'][process.argv[2]]["addresses"]
+renameAddresses['xinfin'] = networkAddresses['50'][process.argv[2]]["addresses"]
 
 
 export let addresses: Addresses = {
-  Governor: '{{apothem.Governor}}',
-  Staking: '{{apothem.Staking}}',
-  VFTHM: '{{apothem.VFTHM}}',
-  blockNumber: networkAddresses['51'][process.argv[2]]["blockNumber"],
-  network: networkAddresses['51']["network"],
+  Governor: '{{xinfin.Governor}}',
+  Staking: '{{xinfin.Staking}}',
+  VFTHM: '{{xinfin.VFTHM}}',
+  blockNumber: networkAddresses['50'][process.argv[2]]["blockNumber"],
+  network: networkAddresses['50']["network"],
 }
 
 const main = (): void => {

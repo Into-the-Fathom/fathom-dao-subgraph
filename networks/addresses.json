@@ -1,7 +1,39 @@
 {
     "51": {
-        "Governor": "0x44BF793cab557BE6d9976C456e5c398e9a88B09a",
-        "Staking": "0xB3f8d459076b445E32bf1d4E22768DD9E944Bd35",
-        "VFTHM":"0xDdca6e085f1dE292461aC16C7B44c7D86d99105B"
+        "dev":{
+            "addresses": {
+                "Governor": "0x2aD8FbeE4AaaB3d43Ed233426C919379CB9b324B",
+                "Staking": "0xAAe8f0e2882665C94d96309ED85BC7622E99940a",
+                "VFTHM":"0x43e4D5f4F2b35E7e3B33279E4374EcEece86033c"
+            },
+            "blockNumber":"47900000"
+        },
+        "demo":{
+            "addresses": {
+                "Governor": "0x089272Bb6949B658A2C194b36a2Edc1A8F76942e",
+                "Staking": "0xd682B81421652424751212603Cc659A80BBC5A5E",
+                "VFTHM":"0x75A95747416cC060C678a580E0a33e4a39AaAE83"
+            },
+            "blockNumber":"47998000"
+        },
+        "qa":{
+            "addresses": {
+                "Governor": "0x2779f3c2515871233fdEd5BFc824dD95B955C57a",
+                "Staking": "0x7cCCEdf0aB490343Dc29009d07c4384460109911",
+                "VFTHM":"0x3aA9081D041735adcDc559b47BC5d184d8e8701D"
+            },
+            "blockNumber":"47998000"
+        },
+        "network":"apothem"
+    },
+    "50": {
+        "prod": {
+            "addresses": {
+                "Governor": "0xE41c6fa1015D2a71C7197065685c099fb927bE03",
+                "Staking": "0x510611DC66255955dDea733200CBed640BF3fA86",
+                "VFTHM":"0x3BF72172406d89BBE1A2c94A2d74E5ab4df7e7E0"
+            },
+            "blockNumber": "59536600"
+        }
     }
 }

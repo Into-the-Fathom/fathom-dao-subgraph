@@ -44,7 +44,7 @@ dataSources:
         - name: StakingPackage
           file: ./abis/StakingPackage.json
         - name: StakingGettersHelper
-          file: ./abis/StakingGettersHelper.json
+          file: ./abis/StakingGetters.json
         - name: ERC20
           file: ./abis/ERC20.json
       eventHandlers:
