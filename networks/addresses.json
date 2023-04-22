@@ -25,5 +25,15 @@
             "blockNumber":"47998000"
         },
         "network":"apothem"
+    },
+    "50": {
+        "prod": {
+            "addresses": {
+                "Governor": "0xE41c6fa1015D2a71C7197065685c099fb927bE03",
+                "Staking": "0x510611DC66255955dDea733200CBed640BF3fA86",
+                "VFTHM":"0x3BF72172406d89BBE1A2c94A2d74E5ab4df7e7E0"
+            },
+            "blockNumber": "59536600"
+        }
     }
 }
