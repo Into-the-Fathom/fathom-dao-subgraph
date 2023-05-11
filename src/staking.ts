@@ -18,7 +18,9 @@ export function stakeHandler(event: Staked): void {
     }
     // increment Total Stake Event count
     protocolStats.totalStakeEvents = protocolStats.totalStakeEvents.plus(BigInt.fromString('1'))
-
+     // define contracts
+    let stakingPackage = StakingPackage.bind(Address.fromString(addresses.Staking))
+    let vfthmToken = ERC20.bind(Address.fromString(addresses.VFTHM))
     // Create stake event
     let stakedEvent = new StakedEvent(protocolStats.totalStakeEvents.toString())
     stakedEvent.account = event.params.account
@@ -40,6 +42,10 @@ export function stakeHandler(event: Staked): void {
     lockPosition.blockNumber = event.block.number
     lockPosition.blockTimestamp = event.block.timestamp
     lockPosition.transaction = event.transaction.hash
+
+    if(!stakingPackage.try_isProhibitedLockPosition(event.params.lockId,event.params.account).reverted){
+        lockPosition.isEarlyUnstakeable = stakingPackage.isProhibitedLockPosition(event.params.lockId,event.params.account)
+    }
    
     // Update staker (create staker if first stake for account)
     let staker = Staker.load(event.params.account.toHexString())
@@ -57,10 +63,6 @@ export function stakeHandler(event: Staked): void {
     let lockPositionIds = staker.lockPositionIds
     lockPositionIds.push(protocolStats.totalStakeEvents.toString())
     staker.lockPositionIds = lockPositionIds
-
-    // define contracts
-    let stakingPackage = StakingPackage.bind(Address.fromString(addresses.Staking))
-    let vfthmToken = ERC20.bind(Address.fromString(addresses.VFTHM))
 
     // add amount to user's total staked
     staker.totalStaked = staker.totalStaked.plus(event.params.amount)

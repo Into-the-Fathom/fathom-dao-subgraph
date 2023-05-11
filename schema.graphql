@@ -85,6 +85,7 @@ type LockPosition @entity {
   blockNumber: BigInt!
   blockTimestamp: BigInt! 
   transaction: Bytes!
+  isEarlyUnstakeable: Boolean
 }
 
 type Stream @entity {
