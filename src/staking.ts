@@ -44,7 +44,7 @@ export function stakeHandler(event: Staked): void {
     lockPosition.transaction = event.transaction.hash
 
     if(!stakingPackage.try_isProhibitedLockPosition(event.params.lockId,event.params.account).reverted){
-        lockPosition.isEarlyUnstakeable = stakingPackage.isProhibitedLockPosition(event.params.lockId,event.params.account)
+        lockPosition.isNotEarlyUnstakeable = stakingPackage.isProhibitedLockPosition(event.params.lockId,event.params.account)
     }
    
     // Update staker (create staker if first stake for account)
