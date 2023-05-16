@@ -8,21 +8,13 @@
             },
             "blockNumber":"49145000"
         },
-        "demo":{
-            "addresses": {
-                "Governor": "0x089272Bb6949B658A2C194b36a2Edc1A8F76942e",
-                "Staking": "0xd682B81421652424751212603Cc659A80BBC5A5E",
-                "VFTHM":"0x75A95747416cC060C678a580E0a33e4a39AaAE83"
-            },
-            "blockNumber":"47998000"
-        },
         "qa":{
             "addresses": {
-                "Governor": "0x2779f3c2515871233fdEd5BFc824dD95B955C57a",
-                "Staking": "0x7cCCEdf0aB490343Dc29009d07c4384460109911",
-                "VFTHM":"0x3aA9081D041735adcDc559b47BC5d184d8e8701D"
+                "Governor": "0xE82f8Adc540A653D21973b2aB41710946fB2D74C",
+                "Staking": "0x3552d7265B8849118E55fCFf61A5b1e34442BD9D",
+                "VFTHM":"0x3985fEb6Da5FD19A1F55913bEF3bE8b708F02253"
             },
-            "blockNumber":"47998000"
+            "blockNumber":"49148000"
         },
         "network":"apothem"
     },
