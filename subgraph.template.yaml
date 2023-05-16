@@ -42,9 +42,7 @@ dataSources:
         - Proposal
       abis:
         - name: StakingPackage
-          file: ./abis/Staking.json
-        - name: StakingGettersHelper
-          file: ./abis/StakingGetter.json
+          file: ./abis/StakingPackage.json
         - name: ERC20
           file: ./abis/ERC20.json
       eventHandlers:

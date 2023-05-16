@@ -27772,12 +27772,12 @@
     },
     "networks": {
         "51": {
-            "address": "0x045F98115E066225752D3B665fb7Ae6F6D2733DB",
-            "transactionHash": "0xea673e0f940758771ae8a6c12cadda3f42d9a4dce6632f138de7b951fb396123"
+            "address": "0x8f40dD0339CCC842c327B880Fef5bf78DAdCE0Fb",
+            "transactionHash": "0x607667a530d4931b1636f4272fcb0633d8aff5ac46134bd3dc68fb6277ca9c3b"
         }
     },
     "schemaVersion": "3.4.10",
-    "updatedAt": "2023-05-05T08:45:37.317Z",
+    "updatedAt": "2023-05-16T06:02:35.683Z",
     "devdoc": {
         "kind": "dev",
         "methods": {
