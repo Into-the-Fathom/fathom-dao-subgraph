@@ -1,31 +1,31 @@
 {
-    "51": {
-        "dev":{
-            "addresses": {
-                "Governor": "0x72518749Fc9e9495c6856278875bF34Ef5Cf77DC",
-                "Staking": "0x87259Df72488D271352d8743d83Cfa8F35882494",
-                "VFTHM":"0xd63aa4ea2B11E630e3CC62b41F210ED00722c79B"
-            },
-            "blockNumber":"49145000"
-        },
-        "qa":{
-            "addresses": {
-                "Governor": "0xE82f8Adc540A653D21973b2aB41710946fB2D74C",
-                "Staking": "0x3552d7265B8849118E55fCFf61A5b1e34442BD9D",
-                "VFTHM":"0x3985fEb6Da5FD19A1F55913bEF3bE8b708F02253"
-            },
-            "blockNumber":"49148000"
-        },
-        "network":"apothem"
+  "51": {
+    "dev": {
+      "addresses": {
+        "Governor": "0x72518749Fc9e9495c6856278875bF34Ef5Cf77DC",
+        "Staking": "0x87259Df72488D271352d8743d83Cfa8F35882494",
+        "VFTHM": "0xd63aa4ea2B11E630e3CC62b41F210ED00722c79B"
+      },
+      "blockNumber": "49145000"
     },
-    "50": {
-        "prod": {
-            "addresses": {
-                "Governor": "0x81F50223c851DE9A6068c1B7A37aA253227952B0",
-                "Staking": "0xCEb16f0de63c006470ED2De9beb7c7dBd47D7437",
-                "VFTHM":"0xB27c3FD774B1a1FbBc17b9E2b62846499Db08A05"
-            },
-            "blockNumber": "59536600"
-        }
+    "qa": {
+      "addresses": {
+        "Governor": "0x86E7BB438EDA0b136EA387feEeBF5e2353Bf2D51",
+        "Staking": "0x40612f5e5802B1CCB892C37C639a7331106C6b1F",
+        "VFTHM": "0xd0072d6EeEC200Ae400C6983dC3c39B8b77b68D5"
+      },
+      "blockNumber": "54306000"
+    },
+    "network": "apothem"
+  },
+  "50": {
+    "prod": {
+      "addresses": {
+        "Governor": "0x81F50223c851DE9A6068c1B7A37aA253227952B0",
+        "Staking": "0xCEb16f0de63c006470ED2De9beb7c7dBd47D7437",
+        "VFTHM": "0xB27c3FD774B1a1FbBc17b9E2b62846499Db08A05"
+      },
+      "blockNumber": "59536600"
     }
+  }
 }

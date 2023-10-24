@@ -52805,12 +52805,12 @@
     },
     "networks": {
         "51": {
-            "address": "0x72518749Fc9e9495c6856278875bF34Ef5Cf77DC",
-            "transactionHash": "0xd61f2e3f17923edb3120bbc4f288ccee60e4a8d43fe268199ea250387769be46"
+            "address": "0x86E7BB438EDA0b136EA387feEeBF5e2353Bf2D51",
+            "transactionHash": "0x4638b0fb3ad00520f90589dadb63b1f25188117ae4ce429c239863dc393b64fd"
         }
     },
     "schemaVersion": "3.4.10",
-    "updatedAt": "2023-05-16T06:02:35.590Z",
+    "updatedAt": "2023-09-13T05:47:51.809Z",
     "devdoc": {
         "errors": {
             "Empty()": [
