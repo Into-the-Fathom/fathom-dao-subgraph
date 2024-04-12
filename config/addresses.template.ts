@@ -14,6 +14,6 @@ export class Addresses {
     Staking: '{{Staking}}',
     VFTHM: '{{VFTHM}}',
     blockNumber: '{{blockNumber}}',
-    network: '{{network}}'
+    network: '{{network}}',
     FTHM: '{{FTHM}}'
   }
