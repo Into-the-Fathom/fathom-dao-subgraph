@@ -15,6 +15,7 @@ export let addresses: Addresses = {
   VFTHM: '{{apothem.VFTHM}}',
   blockNumber: networkAddresses['51'][process.argv[2]]["blockNumber"],
   network: networkAddresses['51']["network"],
+  FTHM: '{{apothem.FTHM}}',
 }
 
 const main = (): void => {
