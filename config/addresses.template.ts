@@ -5,6 +5,7 @@ export class Addresses {
     VFTHM: string
     blockNumber: string
     network: string
+    FTHM: string
   }
   
   // AS compiler does not like const
@@ -14,4 +15,5 @@ export class Addresses {
     VFTHM: '{{VFTHM}}',
     blockNumber: '{{blockNumber}}',
     network: '{{network}}'
+    FTHM: '{{FTHM}}'
   }

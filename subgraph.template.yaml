@@ -59,3 +59,45 @@ dataSources:
         - event: Released(indexed uint256,indexed address,uint256)
           handler: withdrawHandler
       file: ./src/staking.ts
+
+  - kind: ethereum
+    name: FTHMToken
+    network: mainnet
+    source:
+      abi: ERC20
+      address: '{{FTHM}}'
+      startBlock: {{blockNumber}} 
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - TransferEvent
+      abis:
+        - name: ERC20
+          file: ./abis/ERC20.json
+      eventHandlers:
+        - event: Transfer(address,indexed address,indexed address,uint256)
+          handler: handleTransfer
+      file: ./src/token-transfers.ts
+
+  - kind: ethereum
+    name: vFTHMToken
+    network: mainnet
+    source:
+      abi: ERC20
+      address: '{{VFTHM}}'
+      startBlock: {{blockNumber}} 
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - TransferEvent
+      abis:
+        - name: ERC20
+          file: ./abis/ERC20.json
+      eventHandlers:
+        - event: Transfer(address,indexed address,indexed address,uint256)
+          handler: handleTransfer
+      file: ./src/token-transfers.ts

@@ -95,4 +95,16 @@ type Stream @entity {
   cooldownPeriod: BigInt!
 }
 
+type TransferEvent @entity {
+  id: ID!
+  from: Bytes!
+  to: Bytes!
+  value: BigInt!
+  transaction: Bytes!
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  tokenAddress: Bytes!  # Store the contract address of the token
+}
+
+
 
