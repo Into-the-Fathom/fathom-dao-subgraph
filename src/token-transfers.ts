@@ -1,6 +1,7 @@
-import { Transfer as TransferEvent } from "../generated/ERC20/ERC20";
+import { Transfer as TransferEvent } from "../generated/StakingPackage/ERC20";
 import { TransferEvent as TransferEntity } from "../generated/schema";
 import { Bytes } from "@graphprotocol/graph-ts";
+
 
 export function handleTransfer(event: TransferEvent): void {
   let entity = new TransferEntity(
