@@ -37,7 +37,7 @@
     "prep:apothem:qa": "yarn clean && yarn prep:addresses:apothem:qa && mustache ./config/generatedAddresses.json subgraph.template.yaml > subgraph.yaml && graph codegen && graph build", 
 
     "prep:addresses:xinfin:prod": "ts-node config/xinfinAddressScript.ts prod && mustache ./config/generatedAddresses.json ./config/addresses.template.ts > ./config/addresses.ts",
-    "prep:xinfin:prod": "yarn clean && yarn prep:addresses:xinfin:prod && mustache ./config/generatedAddresses.json subgraph.template.yaml > subgraph.yaml && graph codegen && graph build"
+    "prep:xinfin:xinfin": "yarn clean && yarn prep:addresses:xinfin:prod && mustache ./config/generatedAddresses.json subgraph.template.yaml > subgraph.yaml && graph codegen && graph build"
   },
   "dependencies": {
     "@graphprotocol/graph-cli": "0.67.2",
