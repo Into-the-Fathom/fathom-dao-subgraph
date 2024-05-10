@@ -8,23 +8,18 @@
             },
             "blockNumber":"49145000"
         },
-        "demo":{
-            "addresses": {
-                "Governor": "0x089272Bb6949B658A2C194b36a2Edc1A8F76942e",
-                "Staking": "0xd682B81421652424751212603Cc659A80BBC5A5E",
-                "VFTHM":"0x75A95747416cC060C678a580E0a33e4a39AaAE83"
-            },
-            "blockNumber":"47998000"
-        },
-        "qa":{
-            "addresses": {
-                "Governor": "0x2779f3c2515871233fdEd5BFc824dD95B955C57a",
-                "Staking": "0x7cCCEdf0aB490343Dc29009d07c4384460109911",
-                "VFTHM":"0x3aA9081D041735adcDc559b47BC5d184d8e8701D"
-            },
-            "blockNumber":"47998000"
-        },
         "network":"apothem"
+    },
+    "11155111": {
+        "dev":{
+            "addresses": {
+                "Governor": "0x9989D6191dcc00382AA719B8F0Cc800464f300f1",
+                "Staking": "0x5b6439302dD65B104D7ac2724D5AaA68A9a9bdF2",
+                "VFTHM":"0x42883dd54d01cB01828aaA2A6B906a8D8D16560D"
+            },
+            "blockNumber":"5863297"
+        },
+        "network":"sepolia"
     },
     "50": {
         "prod": {
